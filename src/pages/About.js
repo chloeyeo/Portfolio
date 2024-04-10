@@ -9,13 +9,6 @@ const About = () => {
         </div>
         <div className="body">
           <p>Page getting developed!</p>
-          <p>
-            <a
-              id="back-link"
-              href="/"
-              className="text-mySkyblue-500 hover:text-mySkyblue-700"
-            ></a>
-          </p>
           <hr className="border-t border-mySkyblue-300" />
         </div>
       </div>

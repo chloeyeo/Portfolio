@@ -8,13 +8,13 @@ const Footer = () => {
         <div className="flex items-center">
           <span className="text-md font-semibold mr-6">Find Me:</span>
           <a
-            href="mailto:your-email@gmail.com"
+            href="mailto:yeochloe01@gmail.com"
             className="hover:text-white mr-4"
           >
             <FiMail />
           </a>
           <a
-            href="https://github.com/yourgithub"
+            href="https://github.com/chloeyeo"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white mr-4"
@@ -22,7 +22,7 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/yourlinkedin"
+            href="https://www.linkedin.com/in/chloe-yeo-5aa15b1ab/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white mr-4"
@@ -30,7 +30,7 @@ const Footer = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://t.me/yourtelegram"
+            href="https://t.me/chloeyeocodes"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white"
