@@ -7,25 +7,21 @@ import {
   DiGit,
   DiSass,
 } from "react-icons/di";
-import {
-  SiTypescript,
-  SiRedux,
-  SiSocketdotio,
-  SiAmazonaws,
-} from "react-icons/si";
+import { SiTypescript, SiRedux, SiAmazonaws } from "react-icons/si";
+import { BiLogoSpringBoot } from "react-icons/bi";
 
 const About = () => {
   return (
     <div className="main bg-gray-100 min-h-screen py-10 mb-16">
       <div className="container mx-auto px-4">
         <div className="bg-white rounded-lg shadow-md p-8">
-          <h1 className="text-3xl font-bold mb-8">About Me</h1>
+          <h1 className="text-2xl font-bold mb-8">About Me</h1>
           <div className="bg-gray-200 rounded-lg p-6 mb-8">
             <p className="text-lg text-gray-800">
               Greetings, <br />I am{" "}
               <span className="font-semibold">Chloe Yeo</span>, a dedicated{" "}
               <span className="font-semibold">
-                full-stack software enginner
+                full-stack software engineer
               </span>{" "}
               hailing from <span className="font-semibold">South Korea</span>.
               Currently, I am in my final year, pursuing a Bachelor of Science
@@ -41,7 +37,9 @@ const About = () => {
             <br />
             <p className="text-lg text-gray-800">
               During my time at University, I've had the privilege of
-              participating in major hackathons such as ... and ....
+              participating in major hackathons such as Athena London Hackathon
+              and Do you have the GUTS? Hackathon, where I showcased my
+              innovative projects and problem-solving abilities.
             </p>
             <br />
             <p className="text-lg text-gray-800">
@@ -50,7 +48,7 @@ const About = () => {
               solutions.
             </p>
           </div>
-          <h1 className="text-3xl font-bold mb-8">Work Experience</h1>
+          <h1 className="text-2xl font-bold mb-8">Work Experience</h1>
 
           <div className="work-experience mb-8 bg-gray-200 rounded-lg p-6">
             <div className="work-item">
@@ -129,7 +127,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <h2 className="text-3xl font-bold mb-6">Tech Stack</h2>
+          <h2 className="text-2xl font-bold mb-6">Tech Stack</h2>
           <div className="flex flex-wrap justify-center mb-8 bg-gray-200 rounded-lg p-6">
             <SkillIcon icon={<DiJavascript1 />} text="JavaScript" />
             <SkillIcon icon={<SiTypescript />} text="TypeScript" />
@@ -139,7 +137,7 @@ const About = () => {
             <SkillIcon icon={<DiSass />} text="Sass" />
             <SkillIcon icon={<SiAmazonaws />} text="AWS" />
             <SkillIcon icon={<SiRedux />} text="Redux" />
-            <SkillIcon icon={<SiSocketdotio />} text="Socket.io" />
+            <SkillIcon icon={<BiLogoSpringBoot />} text="SpringBoot" />
             <SkillIcon icon={<DiGit />} text="Git" />
           </div>
           <hr className="border-gray-300 my-8" />
