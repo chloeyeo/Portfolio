@@ -8,18 +8,20 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
+    <div className="bg-gray-100 flex flex-col min-h-screen min-w-screen">
       {/* header */}
       <Header />
 
       {/* footer */}
       <Footer />
 
-      {/* routes */}
-      <Routes>
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </>
+      {/* main content routes */}
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
 
