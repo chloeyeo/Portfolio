@@ -1,4 +1,4 @@
-import ReactFullpage from "@fullpage/react-fullpage";
+// import ReactFullpage from "@fullpage/react-fullpage";
 import { useState } from "react";
 import { BiSun, BiMoon } from "react-icons/bi";
 

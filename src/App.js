@@ -1,13 +1,22 @@
-import React from "react"; // to use jsx syntax
+import { lazy } from "react"; // to use jsx syntax
 import "./assets/css/tailwindStyle.css";
 import "./assets/css/style.scss";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import CV from "./pages/CV";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Projects = lazy(() => import("./pages/Projects"));
+const CV = lazy(() => import("./pages/CV"));
+const Header = lazy(() => import("./components/Header"));
+const Footer = lazy(() => import("./components/Footer"));
+
+export const routes = {
+  HOME: "/",
+  ABOUT: "/about",
+  PROJECTS: "/projects",
+  PROJECT: "/projects/:projectId",
+  CV: "/cv",
+};
 
 function App() {
   return (
@@ -21,10 +30,11 @@ function App() {
       {/* main content routes */}
       <main className="flex-grow">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/cv" element={<CV />} />
+          <Route path={routes.HOME} element={<Home />} />
+          <Route path={routes.ABOUT} element={<About />} />
+          <Route path={routes.Projects} element={<Projects />} />
+          {/* <Route path={routes.Project} element={} /> */}
+          <Route path={routes.CV} element={<CV />} />
         </Routes>
       </main>
     </div>
