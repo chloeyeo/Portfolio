@@ -1,7 +1,8 @@
-import { lazy } from "react"; // to use jsx syntax
+import { lazy, useState } from "react"; // to use jsx syntax
 import "./assets/css/tailwindStyle.css";
 import "./assets/css/style.scss";
 import { Routes, Route } from "react-router-dom";
+import DarkModeToggle from "./components/DarkModeToggle";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -19,8 +20,16 @@ export const routes = {
 };
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
   return (
-    <div className="bg-gray-100 flex flex-col min-h-screen min-w-screen">
+    <div className="bg-gray-100 ${darkMode ? 'dark' : ''} flex flex-col min-h-screen min-w-screen">
+      {/* dark mode toggle */}
+      <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+
       {/* header */}
       <Header />
 
@@ -30,9 +39,9 @@ function App() {
       {/* main content routes */}
       <main className="flex-grow">
         <Routes>
-          <Route path={routes.HOME} element={<Home />} />
+          <Route path={routes.HOME} element={<Home darkMode={darkMode} />} />
           <Route path={routes.ABOUT} element={<About />} />
-          <Route path={routes.Projects} element={<Projects />} />
+          <Route path={routes.PROJECTS} element={<Projects />} />
           {/* <Route path={routes.Project} element={} /> */}
           <Route path={routes.CV} element={<CV />} />
         </Routes>

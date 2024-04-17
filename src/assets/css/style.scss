@@ -1,7 +1,20 @@
-.home.dark {
-  background-color: #333;
+$primary: rgba(128, 0, 128, 0.3);
+.dark {
+  background-color: black;
   color: #fff;
   .header {
     color: #292828;
   }
+}
+
+.homeWrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profileImage {
+  background-color: $primary;
+  padding: 10px;
+  margin-top: 2rem;
+  border-radius: 10px;
 }
