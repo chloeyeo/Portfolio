@@ -10,14 +10,14 @@ import {
 import { SiTypescript, SiRedux, SiAmazonaws } from "react-icons/si";
 import { BiLogoSpringBoot } from "react-icons/bi";
 
-const About = () => {
+const About = ({ darkMode }) => {
   return (
-    <div className="main bg-gray-100 min-h-screen py-10 mb-16">
+    <div className="main min-h-screen py-10 mb-16">
       <div className="container mx-auto px-4">
         <div className="bg-white rounded-lg shadow-md p-8">
           <h1 className="text-2xl font-bold mb-8">About Me</h1>
           <div className="bg-gray-200 rounded-lg p-6 mb-8">
-            <p className="text-lg text-gray-800">
+            <p className="text-md text-gray-800">
               Greetings, <br />I am{" "}
               <span className="font-semibold">Chloe Yeo</span>, a dedicated{" "}
               <span className="font-semibold">
@@ -29,20 +29,20 @@ const About = () => {
               <span className="font-semibold">University of Glasgow</span>.
             </p>
             <br />
-            <p className="text-lg text-gray-800">
+            <p className="text-md text-gray-800">
               Throughout my academic journey, I've actively engaged in practical
               work experiences and hackathons, honing my skills and fostering a
               deep understanding of software development.
             </p>
             <br />
-            <p className="text-lg text-gray-800">
+            <p className="text-md text-gray-800">
               During my time at University, I've had the privilege of
               participating in major hackathons such as Athena London Hackathon
               and Do you have the GUTS? Hackathon, where I showcased my
               innovative projects and problem-solving abilities.
             </p>
             <br />
-            <p className="text-lg text-gray-800">
+            <p className="text-md text-gray-800">
               These experiences have allowed me to collaborate with diverse
               teams, tackle real-world challenges, and develop innovative
               solutions.

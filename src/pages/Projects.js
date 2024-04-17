@@ -1,4 +1,4 @@
-const Projects = () => {
+const Projects = ({ darkMode }) => {
   const projects = [
     {
       title: "E-commerce Website",

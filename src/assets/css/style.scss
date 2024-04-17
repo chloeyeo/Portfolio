@@ -1,15 +1,19 @@
 $primary: rgba(128, 0, 128, 0.3);
-.dark {
-  background-color: black;
-  color: #fff;
-  .header {
-    color: #292828;
-  }
-}
 
 .homeWrap {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  // position: relative;
+  .textWrap {
+    // position: absolute;
+    width: 350px;
+    // background: pink;
+  }
+  // .profileImage {
+  //   position: absolute;
+  //   width: 50%;
+  // }
 }
 
 .profileImage {

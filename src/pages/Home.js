@@ -1,6 +1,5 @@
-// import { useState } from "react";
-// import { BiSun, BiMoon } from "react-icons/bi";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Typewriter from "typewriter-effect";
 
 const Home = ({ darkMode }) => {
   // const [darkMode, setDarkMode] = useState(false);
@@ -17,21 +16,35 @@ const Home = ({ darkMode }) => {
       <div className="container mx-auto px-4">
         <div
           className={`homeWrap ${
-            darkMode ? "bg-gray-500" : "bg-white"
+            darkMode ? "bg-jacarta-200" : "bg-white"
           } rounded-lg shadow-lg p-8 mt-10`}
         >
-          <div className="homeText">
-            <h1 className="header text-2xl font-bold mb-8">
-              Welcome to My Portfolio
-            </h1>
-            <p
+          <div>
+            <div className="textWrap">
+              <h1 className="text-lg italic font-bold">Hello!</h1>
+              <h1 className="text-2xl font-bold mb-8">I'm Chloe Yeo</h1>
+              <Typewriter
+                options={{
+                  strings: [
+                    "Welcome to My Portfolio!",
+                    "Feel free to explore!",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  deleteSpeed: 50,
+                  wrapperClassName: "text-2xl font-bold",
+                  // cursorClassName,
+                }}
+              />
+            </div>
+            {/* <p
               className={`${
                 darkMode ? "text-white" : "text-gray-800"
-              } text-lg mb-8`}
+              } text-lg mt-8`}
             >
               This is the main landing page of my portfolio website. Feel free
               to explore!
-            </p>
+            </p> */}
             {/* <button
               onClick={toggleDarkMode}
               className="bg-jacarta-400 hover:bg-jacarta-200 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -45,6 +58,7 @@ const Home = ({ darkMode }) => {
           <LazyLoadImage
             // effect="blur"
             alt="profile image"
+            effect="black-and-white"
             src="/images/coder3.png"
             wrapperClassName="profileImage"
             width="400"

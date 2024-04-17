@@ -26,7 +26,11 @@ function App() {
     setDarkMode(!darkMode);
   };
   return (
-    <div className="bg-gray-100 ${darkMode ? 'dark' : ''} flex flex-col min-h-screen min-w-screen">
+    <div
+      className={`${
+        darkMode ? "bg-gray-900" : "bg-gray-100"
+      } flex flex-col min-h-screen min-w-screen`}
+    >
       {/* dark mode toggle */}
       <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
@@ -40,10 +44,13 @@ function App() {
       <main className="flex-grow">
         <Routes>
           <Route path={routes.HOME} element={<Home darkMode={darkMode} />} />
-          <Route path={routes.ABOUT} element={<About />} />
-          <Route path={routes.PROJECTS} element={<Projects />} />
+          <Route path={routes.ABOUT} element={<About darkMode={darkMode} />} />
+          <Route
+            path={routes.PROJECTS}
+            element={<Projects darkMode={darkMode} />}
+          />
           {/* <Route path={routes.Project} element={} /> */}
-          <Route path={routes.CV} element={<CV />} />
+          <Route path={routes.CV} element={<CV darkMode={darkMode} />} />
         </Routes>
       </main>
     </div>
