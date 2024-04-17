@@ -5,7 +5,7 @@ import { LiaProjectDiagramSolid } from "react-icons/lia";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ darkMode }) => {
   const mainMenu = [
     { name: "Home", url: "/", icon: <IoHomeOutline /> },
     { name: "About", url: "/about", icon: <PiPersonArmsSpread /> },
@@ -13,7 +13,11 @@ const Header = () => {
     { name: "CV / Resume", url: "/cv", icon: <IoDocumentTextOutline /> },
   ];
   return (
-    <div className="bg-jacarta-200">
+    <div
+      className={`${
+        darkMode ? "bg-jacarta-400" : "bg-jacarta-100"
+      } fixed top-0 w-full`}
+    >
       <div className="container mx-auto p-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold flex items-center gap-4">
           <FaReact />

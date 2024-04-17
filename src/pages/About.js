@@ -14,7 +14,11 @@ const About = ({ darkMode }) => {
   return (
     <div className="main min-h-screen py-10 mb-16">
       <div className="container mx-auto px-4">
-        <div className="bg-white rounded-lg shadow-md p-8">
+        <div
+          className={`${
+            darkMode ? "bg-jacarta-200 shadow-white" : "bg-white shadow-lg"
+          } rounded-lg p-8`}
+        >
           <h1 className="text-2xl font-bold mb-8">About Me</h1>
           <div className="bg-gray-200 rounded-lg p-6 mb-8">
             <p className="text-md text-gray-800">

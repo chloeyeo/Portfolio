@@ -35,13 +35,13 @@ function App() {
       <DarkModeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       {/* header */}
-      <Header />
+      <Header darkMode={darkMode} />
 
       {/* footer */}
-      <Footer />
+      <Footer darkMode={darkMode} />
 
       {/* main content routes */}
-      <main className="flex-grow">
+      <main className="w-full h-screen flex justify-center items-start mt-14 mb-14">
         <Routes>
           <Route path={routes.HOME} element={<Home darkMode={darkMode} />} />
           <Route path={routes.ABOUT} element={<About darkMode={darkMode} />} />

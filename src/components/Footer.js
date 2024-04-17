@@ -1,9 +1,13 @@
 import { FiMail } from "react-icons/fi";
 import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 
-const Footer = () => {
+const Footer = ({ darkMode }) => {
   return (
-    <footer className="bg-jacarta-200 py-6 fixed bottom-0 w-full">
+    <footer
+      className={`${
+        darkMode ? "bg-jacarta-400" : "bg-jacarta-100"
+      }  py-6 fixed bottom-0 w-full`}
+    >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <span className="text-md font-semibold mr-6">Find Me:</span>

@@ -1,5 +1,7 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Typewriter from "typewriter-effect";
+import { loadFull } from "tsparticles";
+import Particles from "@tsparticles/react";
 
 const Home = ({ darkMode }) => {
   // const [darkMode, setDarkMode] = useState(false);
@@ -16,8 +18,8 @@ const Home = ({ darkMode }) => {
       <div className="container mx-auto px-4">
         <div
           className={`homeWrap ${
-            darkMode ? "bg-jacarta-200" : "bg-white"
-          } rounded-lg shadow-lg p-8 mt-10`}
+            darkMode ? "bg-jacarta-200 shadow-white" : "bg-white shadow-lg"
+          } rounded-lg p-8 mt-10`}
         >
           <div>
             <div className="textWrap">
