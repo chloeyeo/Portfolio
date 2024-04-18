@@ -1,5 +1,6 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 
 const Home = ({ darkMode }) => {
   // const [darkMode, setDarkMode] = useState(false);
@@ -22,7 +23,10 @@ const Home = ({ darkMode }) => {
           <div>
             <div className="textWrap">
               <h1 className="text-lg italic font-bold">Hello!</h1>
-              <h1 className="text-2xl font-bold mb-8">I'm Chloe Yeo</h1>
+              {/* <h1 className="text-2xl font-bold mb-8">I'm Chloe Yeo</h1> */}
+              <motion.h1 animate={{ fontSize: "30px", fontWeight: "bold" }}>
+                I'm Chloe yeo
+              </motion.h1>
               <Typewriter
                 options={{
                   strings: [

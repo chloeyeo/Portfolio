@@ -3,9 +3,8 @@ import "./assets/css/tailwindStyle.css";
 import "./assets/css/style.scss";
 import { Routes, Route } from "react-router-dom";
 import DarkModeToggle from "./components/DarkModeToggle";
-// import { loadFull } from "tsparticles";
-// import Particles from "@tsparticles/react";
 import ParticlesComponent from "./components/ParticlesComponent";
+// import { motion } from "framer-motion";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
