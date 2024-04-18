@@ -1,7 +1,5 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Typewriter from "typewriter-effect";
-import { loadFull } from "tsparticles";
-import Particles from "@tsparticles/react";
 
 const Home = ({ darkMode }) => {
   // const [darkMode, setDarkMode] = useState(false);
