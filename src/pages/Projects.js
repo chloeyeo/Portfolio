@@ -39,46 +39,54 @@ const Projects = ({ darkMode }) => {
   ];
 
   return (
-    <div className="container mx-auto px-4">
-      <h1 className="text-3xl font-bold my-8">Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-xl font-bold mb-2">{project.title}</h2>
-            <p className="text-gray-700 mb-4">{project.description}</p>
-            <div className="mb-4">
-              <strong>Technologies Used:</strong>{" "}
-              {project.technologies.join(", ")}
-            </div>
-            <div className="flex justify-between items-center">
-              <div>
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline mr-4"
-                >
-                  Live Demo
-                </a>
-                <a
-                  href={project.sourceCodeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                  Source Code
-                </a>
+    <div className="main min-h-screen py-10 mb-16">
+      <div className="container mx-auto px-4">
+        <div
+          className={`${
+            darkMode ? "bg-jacarta-200 shadow-white" : "bg-white shadow-lg"
+          } rounded-lg p-8`}
+        >
+          <h1 className="text-3xl font-bold my-8">Projects</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-md p-6">
+                <h2 className="text-xl font-bold mb-2">{project.title}</h2>
+                <p className="text-gray-700 mb-4">{project.description}</p>
+                <div className="mb-4">
+                  <strong>Technologies Used:</strong>{" "}
+                  {project.technologies.join(", ")}
+                </div>
+                <div className="flex justify-between items-center">
+                  <div>
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 hover:underline mr-4"
+                    >
+                      Live Demo
+                    </a>
+                    <a
+                      href={project.sourceCodeLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 hover:underline"
+                    >
+                      Source Code
+                    </a>
+                  </div>
+                  {project.image && (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-20 h-20 object-cover rounded-full"
+                    />
+                  )}
+                </div>
               </div>
-              {project.image && (
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-20 h-20 object-cover rounded-full"
-                />
-              )}
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
