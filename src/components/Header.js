@@ -15,7 +15,7 @@ const Header = ({ darkMode }) => {
   return (
     <div
       className={`${
-        darkMode ? "bg-jacarta-400" : "bg-jacarta-100"
+        darkMode ? "bg-jacarta-400 text-white" : "bg-jacarta-100"
       } fixed top-0 w-full`}
     >
       <div className="container mx-auto p-4 flex justify-between items-center">
@@ -28,7 +28,9 @@ const Header = ({ darkMode }) => {
             {mainMenu.map((item, i) => (
               <li
                 key={i}
-                className="px-2 py-1 rounded bg-jacarta-50 hover:bg-jacarta-200"
+                className={`px-2 py-1 rounded ${
+                  darkMode ? "bg-jacarta-500" : "bg-jacarta-50"
+                } hover:bg-jacarta-200`}
               >
                 <NavLink
                   to={item.url}

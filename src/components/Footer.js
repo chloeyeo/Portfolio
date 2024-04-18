@@ -5,7 +5,7 @@ const Footer = ({ darkMode }) => {
   return (
     <footer
       className={`${
-        darkMode ? "bg-jacarta-400" : "bg-jacarta-100"
+        darkMode ? "bg-jacarta-400 text-white" : "bg-jacarta-100"
       }  py-6 fixed bottom-0 w-full`}
     >
       <div className="container mx-auto flex justify-between items-center">
